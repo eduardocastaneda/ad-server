@@ -4,6 +4,9 @@ exports.reverse = function(req, res) {
   var reversedWords = reversedChars.join("").split(" ");
   var reversedSentence = reversedWords.reverse().join(" ");
 
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.send({result : reversedSentence});
 };
 
