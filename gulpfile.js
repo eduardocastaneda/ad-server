@@ -5,5 +5,10 @@ var gulp = require('gulp'),
 
 gulp.task('server', function () { 
     server.run(['app.js'],[], false);
-    gulp.watch(['app.js', 'controllers/**/*.js'], [server.run]);
 })
+
+gulp.task('watch', function (){
+  gulp.watch(['app.js', 'controllers/**/*.js'], [server.run]);
+})
+
+gulp.task('default', ['server','watch'])
