@@ -2,6 +2,10 @@
   "name": "ad-server",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "lint" : "standard",
+    "test": "./node_modules/mocha/bin/mocha ./test"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "debug": "~2.2.0",
@@ -9,6 +13,9 @@
     "express": "~4.13.1"
   },
   "devDependencies": {
-    "gulp-nodemon": "^2.1.0"
+    "chai": "^3.5.0",
+    "gulp-nodemon": "^2.1.0",
+    "mocha": "^3.0.2",
+    "standard": "^7.1.2"
   }
 }
