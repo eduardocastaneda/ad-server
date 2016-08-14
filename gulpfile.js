@@ -1,14 +1,15 @@
 'use strict';
 
 var gulp = require('gulp');
-var server = require('gulp-express');
+var gls = require('gulp-live-server');
 
 gulp.task('server', function () {
-  server.run(['app.js'], [], false);
+  var server = gls('app.js', {env: {NODE_ENV: 'development'}}, false);
+  server.start();
+
+  gulp.watch(['app.js', 'routes/**/*.js', 'lib/**/*.js'], function () {
+    server.start.bind(server)();
+  });
 });
 
-gulp.task('watch', function () {
-  gulp.watch(['app.js', 'routes/**/*.js', 'lib/**/*.js'], [server.run]);
-});
-
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server']);
