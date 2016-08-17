@@ -11,7 +11,7 @@
 
 2. Stå i projektet och skriv "npm install" i terminalen
 
-3. Starta applicationen genom att skriva "gulp" i terminalen
+3. Starta applikationen genom att skriva "gulp" i terminalen
 
 5. Servern nås på http://localhost:3000
 
