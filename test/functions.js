@@ -6,7 +6,7 @@ describe('reverse function', function () {
     var message = 'Idag åt jag en macka till frukost'
     var reversedMessage = functions.reverseMessage(message);
 
-    assert.equal(reversedMessage, 'gadi tå gaj ne akcam llit tsokurf');
+    assert.equal(reversedMessage, 'gadI tå gaj ne akcam llit tsokurf');
   });
 });
 
